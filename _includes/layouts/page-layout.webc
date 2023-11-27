@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" class="text-gray-50 bg-[#020409]">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" :content="eleventy.generator" />
+  <link rel="stylesheet" href="/styles.css" webc:keep>
+  <link href="/syntax-highlight.css" rel="stylesheet" webc:keep>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" webc:keep></script>
+  <title @text="title"></title>
+  <script type="module" src="/view-transitions.mjs" webc:keep></script>
+
+</head>
+
+<body class="flex min-h-screen flex-col justify-center pb-10 selection:bg-sky-900">
+  <header webc:if="!no_header"
+    class="[view-transition-name:page-header] mx-auto grid w-full max-w-2xl grid-cols-[auto_1fr] items-center gap-4 py-8 text-center">
+    <nav class="flex gap-4">
+      <header-nav-link label="Home" href="/" active_icon="ph:house-fill" inactive_icon="ph:house" :url="page.url">
+      </header-nav-link>
+      <header-nav-link label="About Me" href="/about-me" active_icon="ion:person" inactive_icon="ion:person-outline"
+        :url="page.url">
+      </header-nav-link>
+      <header-nav-link label="Blog" href="/blog" active_icon="ion:book" inactive_icon="ion:book-outline"
+        :url="page.url">
+      </header-nav-link>
+      <header-nav-link label="Snippets" href="/snippets" active_icon="ant-design:code-filled"
+        inactive_icon="ant-design:code-outlined" :url="page.url">
+      </header-nav-link>
+    </nav>
+    <h1 class="text-5xl text-orange-100" webc:if="page_name">
+      <span transition:name={page_name.toLowerCase()} @text="page_name"></span>
+    </h1>
+  </header>
+  <main class="px-grow group relative my-6 justify-center gap-12 max-w-4xl mx-auto" @raw="content">
+  </main>
+</body>
+
+</html>

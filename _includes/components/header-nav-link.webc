@@ -1,0 +1,9 @@
+<div webc:if="('/' + url?.split('/')[1]) === href" class="flex flex-col items-center transition-colors">
+  <iconify-icon :icon="active_icon" width="45"></iconify-icon>
+  <p class="text-center text-xs" @text="label"></p>
+</div>
+
+<a webc:else :href="href" class="flex flex-col items-center transition-colors hover:text-sky-500">
+  <iconify-icon :icon="inactive_icon" width="45" webc:keep></iconify-icon>
+  <p class="text-center text-xs" @text="label"></p>
+</a>
