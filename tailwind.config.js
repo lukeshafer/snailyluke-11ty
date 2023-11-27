@@ -1,13 +1,30 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+const plugin = require('tailwindcss/plugin');
+
 // @ts-check
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: [
-		'./content/**/*.{html,js,webc}',
-		'./_includes/**/*.{html,js,webc}',
-		'./_data/**/*.{html,js,webc}',
+		'./content/**/*.{html,js,webc,md}',
+		'./_includes/**/*.{html,js,webc,md}',
+		'./_data/**/*.{html,js,webc,md}',
 	],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+			},
+		},
 	},
-	plugins: [require('tailwind-scrollbar'), require('@tailwindcss/typography')],
+	plugins: [
+		//plugin(({ matchUtilities }) => {
+			//matchUtilities({
+				//'view-id': (value) => ({
+					//viewTransitionName: value,
+				//}),
+			//});
+		//}),
+		require('tailwind-scrollbar'),
+		require('@tailwindcss/typography'),
+	],
 };

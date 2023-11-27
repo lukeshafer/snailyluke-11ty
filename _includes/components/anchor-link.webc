@@ -1,7 +1,7 @@
 <a :href="href"
   :class="color_class + ' group/link flex min-w-[10rem] items-center justify-between rounded-full border px-5 py-[0.3rem] transition-colors'">
-  <span :class="'[view-transition-name]:' + (transition_name || href)" @text="name"></span>
-  <div class="transition-transform group-hover/link:translate-x-1 group-hover/link:scale-105 flex items-center">
+  <span :style="`view-transition-name: ${transition_name || href}`" @text="name"></span>
+  <div class="group-hover/link:translate-x-1 group-hover/link:scale-105 flex items-center">
     <iconify-icon icon="cil:arrow-right" width="25"></iconify-icon>
   </div>
 </a>

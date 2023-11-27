@@ -1,0 +1,31 @@
+---
+layout: page-layout.webc
+---
+<header class="mx-auto mb-9 grid w-full max-w-2xl gap-4">
+  <div class="grid grid-cols-[auto_1fr] items-center gap-4 text-center">
+    <h1 class="text-5xl text-orange-100" @text="title"
+      :style="`view-transition-name: ${transition_name}`">
+    </h1>
+  </div>
+  <div class="font-subheading flex items-end justify-self-end text-lg font-light">
+    <div class="text-stone-500">
+      Published
+      <formatted-date :date="date"></formatted-date>
+    </div>
+    <div webc:if="updatedDate" class="last-updated-on">
+      Last updated on
+      <formatted-date :date="updatedDate"></formatted-date>
+    </div>
+  </div>
+</header>
+<article
+  class="w-full max-w-2xl prose-h2:font-subheading prose prose-indigo mx-auto dark:prose-invert prose-h2:font-normal prose-h2:text-orange-100 prose-p:text-base prose-p:leading-5"
+  @raw="content">
+</article>
+<footer class="my-8 text-white">
+  <p class="italic">
+    Luke is a software engineer in Columbus, Ohio. He focuses primarily on JavaScript and
+    TypeScript, and is currently working as an integrations developer at <a href="https://osu.edu">the Ohio State
+      University</a>.
+  </p>
+</footer>

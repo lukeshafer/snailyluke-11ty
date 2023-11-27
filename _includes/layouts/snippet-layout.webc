@@ -10,7 +10,7 @@ page_name: Snippets
     </a>
   </nav>
   <article
-    class="scrollbar-thumb-gray-70k scrollbar-thumb-rounded group relative col-[2_/_-1] overflow-y-scroll bg-[#191724] scrollbar-thin scrollbar-thumb-gray-800">
+    class="scrollbar-thumb-gray-70k scrollbar-thumb-rounded group relative col-[2_/_-1] overflow-y-scroll bg-gray-900 scrollbar-thin scrollbar-thumb-gray-800">
     <button
       class="absolute right-4 top-4 text-gray-600 opacity-0 transition-all group-hover:opacity-100 hover:font-bold hover:text-gray-300">Copy</button>
     <div data-preview-content @raw="content"></div>

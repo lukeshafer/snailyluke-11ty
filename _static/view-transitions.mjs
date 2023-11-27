@@ -27,6 +27,7 @@ function startViewTransition(cb) {
 
 /** @param {string} new_html */
 function transitionToView(new_html) {
+	if (document.body.innerHTML === new_html) return;
 	startViewTransition(() => {
 		document.body.innerHTML = new_html;
 	});

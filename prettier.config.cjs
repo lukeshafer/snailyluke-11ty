@@ -1,12 +1,19 @@
 /** @type {import("prettier").Config} */
 module.exports = {
-  pluginSearchDirs: false,
-  useTabs: true,
-  singleQuote: true,
-  trailingComma: 'es5',
-  tabWidth: 4,
-  useTabs: true,
-  printWidth: 100,
-  bracketSameLine: true,
-  plugins: ['prettier-plugin-tailwindcss'],
+	overrides: [
+		{
+			files: '*.webc',
+			options: {
+				parser: 'html',
+			},
+		},
+	],
+	pluginSearchDirs: false,
+	useTabs: true,
+	singleQuote: true,
+	trailingComma: 'es5',
+	tabWidth: 4,
+	printWidth: 100,
+	bracketSameLine: true,
+	plugins: ['prettier-plugin-tailwindcss'],
 };

@@ -7,11 +7,11 @@
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" :content="eleventy.generator" />
   <link rel="stylesheet" href="/styles.css" webc:keep>
-  <link href="/syntax-highlight.css" rel="stylesheet" webc:keep>
+  <link href="/fonts/poppins/300.css" rel="stylesheet" webc:keep>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" webc:keep></script>
   <title @text="title"></title>
   <script type="module" src="/view-transitions.mjs" webc:keep></script>
-
+  <script type="module" @raw="getBundle('js')" webc:keep></script>
 </head>
 
 <body class="flex min-h-screen flex-col justify-center pb-10 selection:bg-sky-900">
@@ -31,11 +31,12 @@
       </header-nav-link>
     </nav>
     <h1 class="text-5xl text-orange-100" webc:if="page_name">
-      <span transition:name={page_name.toLowerCase()} @text="page_name"></span>
+      <span :style="'view-transition-name: ' + page_name.toLowerCase().replaceAll(' ','-')" @text="page_name"></span>
     </h1>
   </header>
   <main class="px-grow group relative my-6 justify-center gap-12 max-w-4xl mx-auto" @raw="content">
   </main>
+
 </body>
 
 </html>
