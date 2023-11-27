@@ -25,7 +25,7 @@ Here’s a quick example of a simple counter in Svelte:
 	let count = 0;
 </script>
 
-<button on:click={() => count = count + 1}>{count}</button>
+<button on:click="{()" ="">count = count + 1}>{count}</button>
 ```
 
 _You can mess with Svelte more in the [Svelte REPL](https://svelte.dev/repl/)!_
@@ -37,16 +37,16 @@ Solid is a library for building UIs in JavaScript using “**fine-grained reacti
 Here’s a simple counter in Solid:
 
 ```jsx
-import { createSignal } from 'solid-js'
+import { createSignal } from 'solid-js';
 
 export function Counter() {
-	const [count, setCount] = createSignal(0)
+	const [count, setCount] = createSignal(0);
 
 	return (
 		<button type="button" onClick={() => setCount((c) => c + 1)}>
 			{count()}
 		</button>
-	)
+	);
 }
 ```
 
@@ -76,48 +76,48 @@ Unlike Svelte, Solid works directly in JavaScript. Though it uses a compiler, th
 
 **Pros:**
 
-- Easy to learn, especially for newcomers to JS frameworks
-- By using a compiler, best practices can be baked into the framework instead of dependent on the author
-- Built in scoping for CSS
-- Easy to use with transpiled languages like TypeScript and Sass
-- No library shipped to the client — just the compiled JS
+-  Easy to learn, especially for newcomers to JS frameworks
+-  By using a compiler, best practices can be baked into the framework instead of dependent on the author
+-  Built in scoping for CSS
+-  Easy to use with transpiled languages like TypeScript and Sass
+-  No library shipped to the client — just the compiled JS
 
 **Cons:**
 
-- Requires you to trust the compiler
-- Limited online resources and help compared to older frameworks like React and Vue
-- By using a custom language, it breaks certain rules of JavaScript
-- Reactive state is tied directly to components by default, unless using [Stores](https://svelte.dev/docs#run-time-svelte-store) to share state
-- Because of its custom language, developer tooling, like autocomplete and language servers, is all custom to the framework, leading to challenges with some text editors (though it’s great with VS Code!)
+-  Requires you to trust the compiler
+-  Limited online resources and help compared to older frameworks like React and Vue
+-  By using a custom language, it breaks certain rules of JavaScript
+-  Reactive state is tied directly to components by default, unless using [Stores](https://svelte.dev/docs#run-time-svelte-store) to share state
+-  Because of its custom language, developer tooling, like autocomplete and language servers, is all custom to the framework, leading to challenges with some text editors (though it’s great with VS Code!)
 
 ### Solid
 
 **Pros:**
 
-- Extremely performant
-- Uses a functional approach to make components easy to author and compose
-- Component functions only run once to setup the DOM, and only reactive functions ever re-run
-- Components are strictly an authoring benefit, and do not affect runtime whatsoever
-- Signals contain state directly, and can be freely passed between components and functions ([just don’t destructure props](https://www.solidjs.com/tutorial/props_defaults))
-- JSX already works great with most developer tooling and editors
+-  Extremely performant
+-  Uses a functional approach to make components easy to author and compose
+-  Component functions only run once to setup the DOM, and only reactive functions ever re-run
+-  Components are strictly an authoring benefit, and do not affect runtime whatsoever
+-  Signals contain state directly, and can be freely passed between components and functions ([just don’t destructure props](https://www.solidjs.com/tutorial/props_defaults))
+-  JSX already works great with most developer tooling and editors
 
 **Cons:**
 
-- You have to adjust your mental model for reactivity, which is challenging, especially if coming from React
-- Limited resources for support — fewer even than Svelte
-- No built-in tools for handling CSS — you’re on your own
-- As mentioned above, you have to take care when destructuring objects to avoid breaking reactivity ([there’s an ESLint plugin to warn you](https://www.npmjs.com/package/eslint-plugin-solid))
-- Ships a (small) library to the client (though per-component sizes are smaller than Svelte)
+-  You have to adjust your mental model for reactivity, which is challenging, especially if coming from React
+-  Limited resources for support — fewer even than Svelte
+-  No built-in tools for handling CSS — you’re on your own
+-  As mentioned above, you have to take care when destructuring objects to avoid breaking reactivity ([there’s an ESLint plugin to warn you](https://www.npmjs.com/package/eslint-plugin-solid))
+-  Ships a (small) library to the client (though per-component sizes are smaller than Svelte)
 
 ## Both are amazing
 
 I’m a big fan of both of these frameworks. Though they take very different approaches to creating applications, both are dedicated to their visions, and I believe both are guiding web development toward a brighter future. Here are a few things I love about BOTH frameworks:
 
-- They work great with [TypeScript](https://www.typescriptlang.org/), my default for everything these days
-- While offering a good experience for the developer, their foremost goal is to create great user experiences, and ship less unnecessary code
-- They have amazing interactive tutorials and guides on their websites ([Svelte](https://svelte.dev), [Solid](https://solidjs.com))
-- Both work great with [Astro](https://astro.build/), my meta-framework of choice 😎
-- No virtual DOM, reducing JS overhead
+-  They work great with [TypeScript](https://www.typescriptlang.org/), my default for everything these days
+-  While offering a good experience for the developer, their foremost goal is to create great user experiences, and ship less unnecessary code
+-  They have amazing interactive tutorials and guides on their websites ([Svelte](https://svelte.dev), [Solid](https://solidjs.com))
+-  Both work great with [Astro](https://astro.build/), my meta-framework of choice 😎
+-  No virtual DOM, reducing JS overhead
 
 ## Which do I prefer?
 

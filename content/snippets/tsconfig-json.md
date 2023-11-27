@@ -3,6 +3,7 @@ tags: snippets
 name: tsconfig.json
 layout: snippet-layout.webc
 ---
+
 ```json
 {
 	"compilerOptions": {

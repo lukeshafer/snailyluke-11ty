@@ -3,30 +3,27 @@ title: SnailyLuke Home
 layout: page-layout.webc
 no_header: true
 ---
-<header
-  class="mx-auto flex w-full max-w-sm flex-col items-start gap-2 p-8 font-sans font-light">
-  <h1 class="text-5xl text-orange-100">Hi I'm Luke</h1>
-  <p class="text-xl">I create software</p>
+
+<header class="mx-auto flex w-full max-w-sm flex-col items-start gap-2 p-8 font-sans font-light">
+	<h1 class="text-5xl text-orange-100">Hi I'm Luke</h1>
+	<p class="text-xl">I create software</p>
 </header>
 <main>
-  <nav class="mx-auto flex max-w-sm flex-col items-start gap-2 px-4">
-    <anchor-link 
-      name="About Me"
-      href="/about-me"
-      color_class="border-indigo-950 hover:bg-indigo-950"
-      transition_name="about-me"
-    ></anchor-link>
-    <anchor-link 
-      name="Blog"
-      href="/blog"
-      color_class="border-emerald-950 hover:bg-emerald-950"
-      transition_name="blog"
-    ></anchor-link>
-    <anchor-link 
-      name="Snippets"
-      href="/snippets"
-      color_class="border-sky-950 hover:bg-sky-950"
-      transition_name="snippets"
-    ></anchor-link>
-  </nav>
+	<nav class="mx-auto flex max-w-sm flex-col items-start gap-2 px-4">
+		<anchor-link
+			name="About Me"
+			href="/about-me"
+			color_class="border-indigo-950 hover:bg-indigo-950"
+			transition_name="about-me"></anchor-link>
+		<anchor-link
+			name="Blog"
+			href="/blog"
+			color_class="border-emerald-950 hover:bg-emerald-950"
+			transition_name="blog"></anchor-link>
+		<anchor-link
+			name="Snippets"
+			href="/snippets"
+			color_class="border-sky-950 hover:bg-sky-950"
+			transition_name="snippets"></anchor-link>
+	</nav>
 </main>

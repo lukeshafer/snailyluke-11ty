@@ -1,13 +1,13 @@
 <script webc:type="js">
-  const html = String.raw
-  const dateObj = new Date(date)
-  html`
-<time datetime="${dateObj.toISOString()}" class="${add_class}">
-  ${dateObj.toLocaleDateString('en-us', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  })}
-</time>
-`
+	const html = String.raw;
+	const dateObj = new Date(date);
+	html`
+		<time datetime="${dateObj.toISOString()}" class="${add_class}">
+			${dateObj.toLocaleDateString('en-us', {
+				year: 'numeric',
+				month: 'short',
+				day: 'numeric',
+			})}
+		</time>
+	`;
 </script>

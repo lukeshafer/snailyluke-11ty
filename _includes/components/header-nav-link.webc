@@ -1,6 +1,11 @@
-<a :href="href" :style="`view-transition-name: ${href.slice(1)}-link`"
-  class="flex flex-col items-center transition-colors hover:text-sky-500">
-  <iconify-icon webc:if="('/' + url?.split('/')[1]) === href" :icon="active_icon" width="45"></iconify-icon>
-  <iconify-icon webc:else :icon="inactive_icon" width="45" webc:keep></iconify-icon>
-  <p class="text-center text-xs" @text="label"></p>
+<a
+	:href="href"
+	:style="`view-transition-name: ${href.slice(1)}-link`"
+	class="flex flex-col items-center transition-colors hover:text-sky-500">
+	<iconify-icon
+		webc:if="('/' + url?.split('/')[1]) === href"
+		:icon="active_icon"
+		width="45"></iconify-icon>
+	<iconify-icon webc:else :icon="inactive_icon" width="45" webc:keep></iconify-icon>
+	<p class="text-center text-xs" @text="label"></p>
 </a>

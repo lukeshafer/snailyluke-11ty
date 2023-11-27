@@ -3,6 +3,5 @@ title: About me | SnailyLuke
 page_name: About Me
 layout: page-layout.webc
 ---
-<article>
-  someday this will have info about me :)
-</article>
+
+<article>someday this will have info about me :)</article>

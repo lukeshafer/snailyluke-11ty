@@ -9,7 +9,8 @@
     "11ty:dev": "eleventy --serve",
     "11ty:build": "eleventy",
     "tailwind:dev": "tailwindcss -i ./content/styles.css -o ./_site/styles.css --watch",
-    "tailwind:build": "tailwindcss -i ./content/styles.css -o ./_site/styles.css"
+    "tailwind:build": "tailwindcss -i ./content/styles.css -o ./_site/styles.css",
+    "format": "prettier -w content/* _data/* _static/* _includes/**/*.webc"
   },
   "keywords": [],
   "author": "",
