@@ -3,22 +3,13 @@ layout: page-layout.webc
 page_name: Snippets
 ---
 
-<section class="grid h-96 max-h-screen grid-cols-4">
-	<nav
-		class="grid h-full content-start gap-2 overflow-y-scroll bg-gray-900 py-2 scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-gray-700">
-		<a
-			webc:for="snip of collections.snippets"
-			:href="snip.filePathStem"
-			class="w-full p-2 px-4 text-left group-[selected]:p-2 hover:bg-sky-900/50"
-			@text="snip.data.name">
-		</a>
-	</nav>
-	<article
-		class="scrollbar-thumb-gray-70k scrollbar-thumb-rounded group relative col-[2_/_-1] overflow-y-scroll bg-gray-900 scrollbar-thin scrollbar-thumb-gray-800">
-		<button
-			class="absolute right-4 top-4 text-gray-600 opacity-0 transition-all group-hover:opacity-100 hover:font-bold hover:text-gray-300">
-			Copy
-		</button>
-		<div data-preview-content @raw="content"></div>
-	</article>
-</section>
+<snippet-list class="grid h-96 max-h-screen grid-cols-4">
+	<snippet-item
+		webc:for="snip of collections.snippets"
+		webc:keep
+		class="w-full"
+		:@href="snip.filePathStem"
+		:label="snip.data.name"
+		:@content="snip.content">
+	</snippet-item>
+</snippet-list>

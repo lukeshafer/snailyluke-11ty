@@ -1,0 +1,36 @@
+<nav
+	class="grid h-full content-start gap-2 overflow-y-scroll bg-gray-900 py-2 scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-gray-700">
+	<slot></slot>
+</nav>
+<article
+	class="scrollbar-thumb-rounded group/code-preview relative col-[2_/_-1] overflow-y-scroll bg-gray-900 scrollbar-thin scrollbar-thumb-gray-800">
+	<copy-button
+    webc:keep
+		:content="content"
+		class="absolute right-4 top-4 inline-block"></copy-button>
+	<div data-preview-content @raw="content"></div>
+</article>
+
+<script>
+	customElements.define(
+		'snippet-list',
+		class SnippetList extends HTMLElement {
+			connectedCallback() {
+				this.addEventListener('snippetclick', (e) => {
+					const snippetPreview = this.querySelector('[data-preview-content]');
+					if (!snippetPreview) throw new Error('Snippet Preview Container not found.');
+
+					this.setAttribute('active-href', e.detail.href);
+					snippetPreview.replaceChildren(e.detail.node);
+
+					const copy_button = this.querySelector('copy-button');
+					copy_button.setAttribute('content', snippetPreview.textContent);
+
+					const url = new URL(window.location.href);
+					url.pathname = e.detail.href;
+					window.history.replaceState({}, '', url.toString());
+				});
+			}
+		}
+	);
+</script>
