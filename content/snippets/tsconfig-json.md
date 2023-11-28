@@ -2,6 +2,7 @@
 tags: snippets
 name: tsconfig.json
 layout: snippet-layout.webc
+key: tsconfig
 ---
 
 ```json

@@ -2,6 +2,7 @@
 name: prettier.config.cjs -- Astro
 layout: snippet-layout
 tags: snippets
+key: prettierastro
 ---
 
 ```js

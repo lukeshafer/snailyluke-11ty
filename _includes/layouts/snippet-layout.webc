@@ -3,13 +3,8 @@ layout: page-layout.webc
 page_name: Snippets
 ---
 
-<snippet-list class="grid h-96 max-h-screen grid-cols-4">
-	<snippet-item
-		webc:for="snip of collections.snippets"
-		webc:keep
-		class="w-full"
-		:@href="snip.filePathStem"
-		:label="snip.data.name"
-		:@content="snip.content">
-	</snippet-item>
+<snippet-list :data-active="key" class="group/snippet-list grid h-96 max-h-screen grid-cols-4" webc:keep :@content="content">
+  <snippet-item webc:for="snip of collections.snippets" webc:keep class="w-full" :@href="snip.filePathStem"
+    :label="snip.data.name" :@content="snip.content" :key="snip.data.key">
+  </snippet-item>
 </snippet-list>

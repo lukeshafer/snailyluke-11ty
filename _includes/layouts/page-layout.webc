@@ -12,6 +12,9 @@
 			webc:keep></script>
 		<title @text="title"></title>
 		<script type="module" src="/view-transitions.mjs" webc:keep></script>
+		<script type="module" src="/elements/copy-button.mjs" webc:keep></script>
+		<script type="module" src="/elements/snippet-item.mjs" webc:keep></script>
+		<script type="module" src="/elements/snippet-list.mjs" webc:keep></script>
 		<script type="module" @raw="getBundle('js')" webc:keep></script>
 	</head>
 
@@ -27,13 +30,14 @@
 					inactive_icon="ph:house"
 					:url="page.url">
 				</header-nav-link>
-				<header-nav-link
-					label="About Me"
-					href="/about-me"
-					active_icon="ion:person"
-					inactive_icon="ion:person-outline"
-					:url="page.url">
-				</header-nav-link>
+        <!--COMING SOON-->
+				<!--<header-nav-link-->
+					<!--label="About Me"-->
+					<!--href="/about-me"-->
+					<!--active_icon="ion:person"-->
+					<!--inactive_icon="ion:person-outline"-->
+					<!--:url="page.url">-->
+				<!--</header-nav-link>-->
 				<header-nav-link
 					label="Blog"
 					href="/blog"

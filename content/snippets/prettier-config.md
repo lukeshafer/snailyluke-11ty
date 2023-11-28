@@ -2,6 +2,7 @@
 name: prettier.config.cjs
 layout: snippet-layout
 tags: snippets
+key: prettier
 ---
 
 ```js

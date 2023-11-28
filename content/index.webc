@@ -10,11 +10,12 @@ no_header: true
 </header>
 <main>
 	<nav class="mx-auto flex max-w-sm flex-col items-start gap-2 px-4">
-		<anchor-link
-			name="About Me"
-			href="/about-me"
-			color_class="border-indigo-950 hover:bg-indigo-950"
-			transition_name="about-me"></anchor-link>
+    <!--COMING SOON-->
+		<!--<anchor-link-->
+			<!--name="About Me"-->
+			<!--href="/about-me"-->
+			<!--color_class="border-indigo-950 hover:bg-indigo-950"-->
+			<!--transition_name="about-me"></anchor-link>-->
 		<anchor-link
 			name="Blog"
 			href="/blog"
